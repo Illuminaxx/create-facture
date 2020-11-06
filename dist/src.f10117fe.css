@@ -899,7 +899,10 @@ button:focus {
   top: 7px;
 }
 .actions__estimate__print {
-  background: #f3bf5f;
+  background: #FFC353;
+}
+.actions__estimate__print .btn-label {
+  color: #363636;
 }
 .actions__estimate__print:hover {
   background: #eca115;
@@ -912,6 +915,9 @@ button:focus {
 }
 .actions__estimate__preview {
   background: #6ed37b;
+}
+.actions__estimate__preview .btn-label {
+  color: #221424;
 }
 .actions__estimate__tooltip {
   position: relative;

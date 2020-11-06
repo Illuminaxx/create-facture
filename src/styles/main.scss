@@ -435,8 +435,11 @@ button {
 			top: 7px;
 		}
 		&__print {
-			background: #f3bf5f;
+			background: #FFC353;
 
+			.btn-label {
+				color: #363636
+			}
 			&:hover {
 				background: #eca115;
 			}
@@ -450,6 +453,9 @@ button {
 		}
 		&__preview {
 			background: #6ed37b;
+			.btn-label {
+				color: #221424
+			}
 		}
 		&__tooltip {
 			position: relative;

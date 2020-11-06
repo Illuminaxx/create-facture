@@ -615,8 +615,13 @@ button:focus {
 .estimate__title {
   margin-bottom: 25px;
 }
-.estimate__title h2 {
+.estimate__title h1 {
   border-bottom: 1px solid #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 .estimate__company {
   display: grid;

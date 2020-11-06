@@ -5,7 +5,6 @@ import {
 	displayValue,
 	calculateTotalAmount,
 	calculateSubtotal,
-	calculateTVA,
 	calculateVat
 } from "../libs/utils";
 
@@ -142,9 +141,6 @@ class ProductsTable {
 		if (this.isRowFilled()) {
 			this.id += 1;
 			this.$tableBody.insertAdjacentHTML("beforeend", this.createRow(this.id));
-
-			/*this.calculateSubtotal();
-			this.calculateTotal();*/
 		}
 	};
 
@@ -152,9 +148,6 @@ class ProductsTable {
 		const $row = $(`#js-row-${this.id}`);
 		$row.parentNode.removeChild($row);
 		this.id -= 1;
-
-		/*this.calculateSubtotal();
-		this.calculateTotal();*/
 	};
 }
 

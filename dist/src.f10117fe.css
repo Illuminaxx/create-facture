@@ -735,7 +735,14 @@ button:focus {
 }
 .estimate__data__notes textarea {
   width: 478px;
-  height: 65px;
+  height: 19px;
+  -moz-transition: height 0.1s linear;
+  -o-transition: height 0.1s linear;
+  -webkit-transition: height 0.1s linear;
+  transition: height 0.1s linear;
+}
+.estimate__data__notes textarea.expand {
+  height: 50px;
 }
 .estimate__table {
   min-height: 380px;

@@ -253,8 +253,16 @@ button {
 
 			textarea {
 				width: 478px;
-				height: 65px;
+				height: 19px;
+				@include transition(height 0.1s linear);
+
+				&.expand {
+					height: 50px;
+				}
 			}
+
+
+
 		}
 	}
 	&__table {

@@ -258,7 +258,7 @@ exports.isFieldValid = function (value, elemContainer) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.$total = exports.$displayValTVA = exports.$subtotal = exports.$discountField = exports.$addressInputField = exports.$displayVatEl = exports.$vatField = exports.$datepicker = void 0;
+exports.$total = exports.$displayValTVA = exports.$subtotal = exports.$discountField = exports.$noteInputField = exports.$addressInputField = exports.$displayVatEl = exports.$vatField = exports.$datepicker = void 0;
 
 var utils_1 = require("../libs/utils");
 
@@ -266,9 +266,9 @@ exports.$datepicker = utils_1.$(".js-datepicker");
 exports.$vatField = utils_1.$("#js-vat");
 exports.$displayVatEl = utils_1.$(".js-vat-display");
 exports.$addressInputField = utils_1.$(".js-company-address");
+exports.$noteInputField = utils_1.$(".js-note-input");
 exports.$discountField = utils_1.$(".js-discount");
-exports.$subtotal = utils_1.$("#js-subtotal"); //export const $montantTva: HTMLElement = $(".value-tva");
-
+exports.$subtotal = utils_1.$("#js-subtotal");
 exports.$displayValTVA = utils_1.$("#js-tva-display");
 exports.$total = utils_1.$("#js-total");
 },{"../libs/utils":"src/libs/utils.ts"}],"src/components/ProductsTable.ts":[function(require,module,exports) {
@@ -327,9 +327,6 @@ function () {
         _this.id += 1;
 
         _this.$tableBody.insertAdjacentHTML("beforeend", _this.createRow(_this.id));
-        /*this.calculateSubtotal();
-        this.calculateTotal();*/
-
       }
     };
 
@@ -337,8 +334,6 @@ function () {
       var $row = utils_1.$("#js-row-" + _this.id);
       $row.parentNode.removeChild($row);
       _this.id -= 1;
-      /*this.calculateSubtotal();
-      this.calculateTotal();*/
     };
 
     this.$tableBody.innerHTML = this.createRow(this.id);
@@ -563,6 +558,9 @@ var Image_1 = __importDefault(require("./components/Image"));
   var productsTable = new ProductsTable_1.default();
   new ActionBar_1.default();
   el.$addressInputField.addEventListener("focusin", function (e) {
+    e.target.classList.add("expand");
+  });
+  el.$noteInputField.addEventListener("focusin", function (e) {
     e.target.classList.add("expand");
   });
   el.$discountField.addEventListener("mouseover", function (e) {

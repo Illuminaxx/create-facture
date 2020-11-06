@@ -2,7 +2,7 @@
 
 import "./styles/main.scss";
 
-import { displayValue, calculateDiscount, calculateTVA } from "./libs/utils";
+import { displayValue, calculateDiscount } from "./libs/utils";
 import * as el from "./components/Selectors";
 import ProductsTable from "./components/ProductsTable";
 import ActionBar from "./components/ActionBar";
@@ -14,6 +14,10 @@ import Image from "./components/Image";
 	new ActionBar();
 
 	el.$addressInputField.addEventListener("focusin", (e: any) => {
+		e.target.classList.add("expand");
+	});
+
+	el.$noteInputField.addEventListener("focusin", (e: any) => {
 		e.target.classList.add("expand");
 	});
 

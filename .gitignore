@@ -6,7 +6,7 @@
 log/
 node_modules/
 .cache
-
+dist
 
 ## Files
 result.xml

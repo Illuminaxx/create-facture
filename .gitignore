@@ -5,9 +5,8 @@
 ## Directories
 log/
 node_modules/
-dist
 .cache
-docs
+
 
 ## Files
 result.xml

@@ -14,7 +14,7 @@
 <body>
 	<div class="estimate">
 		<div class="estimate__title">
-			<h2>Estimation Travail</h2>
+			<h1>Estimation Travail</h1>
 		</div>
 		<div class="estimate__company">
 			<div class="estimate__company__logo js-logo-wrapper">
@@ -26,36 +26,34 @@
 			</div>
 			<div class="estimate__company__references">
 				<label>Information à propos de votre société</label>
-				<input type="text" class="js-company-email email" name="companyEmail" placeholder="Adresse mail" />
-				<input type="text" class="js-company-website website" name="companyWebsite" placeholder="Site web" />
-				<input type="text" class="js-company-telephone telephone" name="companyTelephone"
-					placeholder="Téléphone" />
-				<textarea class="js-company-address address" name="companyAddress"
-					placeholder="Adresse de la société"></textarea>
+				<input type="text" id="email" class="js-company-email email" name="companyEmail" placeholder="Adresse mail" aria-label="companyEmail"  />
+				<input type="text" id="website" class="js-company-website website" name="companyWebsite" placeholder="Site web" aria-label="companyWebsite"  />
+				<input type="text" class="js-company-telephone telephone" name="companyTelephone" placeholder="Téléphone"  aria-label="companyTelephone"/>
+				<textarea class="js-company-address address" id="address" name="companyAddress" placeholder="Adresse de la société" aria-label="companyAddress"></textarea>
 			</div>
 		</div>
 		<div class="estimate__data clearfix">
 			<div class="estimate__data__facture">
 				<label>Facture n°</label>
-				<input type="text" name="estimateFactureNumber" />
+				<input type="text" name="estimateFactureNumber" aria-label="estimateFactureNumber" />
 			</div>
 			<div class="estimate__data__date">
 				<label>Date</label>
-				<input type="text" class="js-datepicker datepicker" name="estimateDate" placeholder="jj-mm-aaaa" />
+				<input type="text" class="js-datepicker datepicker" name="estimateDate" aria-label="estimateDate" placeholder="jj-mm-aaaa" />
 			</div>
 			<div class="estimate__data__discount">
 				<label>Remise</label>
-				<input type="text" class="js-discount" name="discount" placeholder="0" />
+				<input type="text" class="js-discount" name="discount" placeholder="0" aria-label="discount" />
 				<span>%</span>
 			</div>
 			<div class="estimate__data__vat">
 				<label>TVA</label>
-				<input type="text" id="js-vat" name="vat" placeholder="0" />
+				<input type="text" id="js-vat" name="vat" placeholder="0" aria-label="vat" />
 				<span>%</span>
 			</div>
 			<div class="estimate__data__notes">
 				<label>Notes</label>
-				<textarea class="js-note-input" placeholder="Ajouter des notes"></textarea>
+				<textarea class="js-note-input" name="notes" placeholder="Ajouter des notes" aria-label="notes"></textarea>
 			</div>
 		</div>
 		<div class="estimate__table">
@@ -73,7 +71,7 @@
 		<footer class="estimate__footer">
 			<div class="estimate__footer__subtotal">
 				<div class="estimate__footer__subtotal__description">
-					<h5>Sous-total</h5>
+					<h1>Sous-total</h1>
 				</div>
 				<div class="estimate__footer__subtotal__value">
 					<span id="js-subtotal" class="value">0</span>
@@ -81,7 +79,7 @@
 			</div>
 			<div class="estimate__footer__tva">
 				<div class="estimate__footer__tva__description">
-					<h5>Montant TVA</h5>
+					<h1>Montant TVA</h1>
 				</div>
 				<div class="estimate__footer__tva__value">
 					<span id="js-tva-display" class="value-tva" value="">0</span>
@@ -89,7 +87,7 @@
 			</div>
 			<div class="estimate__footer__total">
 				<div class="estimate__footer__total__description">
-					<h4>Total/Conditions de paiement</h4>
+					<h1>Total/Conditions de paiement</h1>
 					<span>The price is subject to <span class="js-vat-display">0</span>%
 						VAT</span>
 				</div>
@@ -99,7 +97,7 @@
 			</div>
 			<div class="estimate__footer__information">
 				<div class="estimate__footer__information__description">
-					<h4>Informations de la société</h4>
+					
 				</div>
 			</div>
 		</footer>

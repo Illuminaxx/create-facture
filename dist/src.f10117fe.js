@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles/main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\..\\assets\\fonts\\icomoon.eot":[["icomoon.592762f7.eot","assets/fonts/icomoon.eot"],"assets/fonts/icomoon.eot"],"./..\\..\\assets\\fonts\\icomoon.ttf":[["icomoon.31a6ec37.ttf","assets/fonts/icomoon.ttf"],"assets/fonts/icomoon.ttf"],"./..\\..\\assets\\fonts\\icomoon.woff":[["icomoon.4d39a651.woff","assets/fonts/icomoon.woff"],"assets/fonts/icomoon.woff"],"./..\\..\\assets\\fonts\\icomoon.svg":[["icomoon.e5b6a6c2.svg","assets/fonts/icomoon.svg"],"assets/fonts/icomoon.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/libs/utils.ts":[function(require,module,exports) {
+},{"./..\\..\\assets\\fonts\\icomoon.eot":[["icomoon.592762f7.eot","assets/fonts/icomoon.eot"],"assets/fonts/icomoon.eot"],"./..\\..\\assets\\fonts\\icomoon.ttf":[["icomoon.31a6ec37.ttf","assets/fonts/icomoon.ttf"],"assets/fonts/icomoon.ttf"],"./..\\..\\assets\\fonts\\icomoon.woff":[["icomoon.4d39a651.woff","assets/fonts/icomoon.woff"],"assets/fonts/icomoon.woff"],"./..\\..\\assets\\fonts\\icomoon.svg":[["icomoon.e5b6a6c2.svg","assets/fonts/icomoon.svg"],"assets/fonts/icomoon.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/libs/utils.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -307,7 +307,7 @@ function () {
     };
 
     this.createRow = function (id) {
-      return "\n\t\t<tr id=\"js-row-" + id + "\">\n\t\t\t<td class=\"col small\">\n\t\t\t\t<select class=\"js-select\" id=\"js-select-" + id + "\">\n\t\t\t\t\t<option value=\"0\">Choisissez</option>\n\t\t\t\t\t<option value=\"1\">Services</option>\n\t\t\t\t\t<option value=\"2\">Heures</option>\n\t\t\t\t\t<option value=\"3\">Jours</option>\n\t\t\t\t\t<option value=\"4\">Produit</option>\n\t\t\t\t</select>\n\t\t\t</td>\n\t\t\t<td class=\"col large\">\n\t\t\t\t<textarea class=\"js-description\" value=\"\"></textarea>\n\t\t\t</td>\n\t\t\t<td class=\"col small\">\n\t\t\t\t<input id=\"js-unity-" + id + "\" class=\"js-unity\" type=\"text\" placeholder=\"0.00\" value=\"\">\n\t\t\t</td>\n\t\t\t<td class=\"col small\">\n\t\t\t\t<input data-id=\"" + id + "\" id=\"js-quantity-" + id + "\" class=\"js-quantity\" type=\"text\" placeholder=\"0\" value=\"\">\n\t\t\t</td>\n\t\t\t<td class=\"amount-col col small\">\n\t\t\t\t<input id=\"js-amount-" + id + "\" class=\"js-amount\" readonly placeholder=\"0.00\" value=\"\">\n\t\t\t</td>\n\t\t\t" + (id !== 0 ? "<td class=\"remove-wrapper\"><i id=\"js-delete-" + id + "\" class=\"js-delete icon icon-minus\"></i></td>" : "") + "\n\t\t</tr>";
+      return "\n\t\t<tr id=\"js-row-" + id + "\">\n\t\t\t<td class=\"col small\">\n\t\t\t\t<select class=\"js-select\" name=\"item\" id=\"js-select-" + id + "\" aria-label=\"item\">\n\t\t\t\t\t<option value=\"0\">Choisissez</option>\n\t\t\t\t\t<option value=\"1\">Services</option>\n\t\t\t\t\t<option value=\"2\">Heures</option>\n\t\t\t\t\t<option value=\"3\">Jours</option>\n\t\t\t\t\t<option value=\"4\">Produit</option>\n\t\t\t\t</select>\n\t\t\t</td>\n\t\t\t<td class=\"col large\">\n\t\t\t\t<textarea class=\"js-description\" name=\"description\" value=\"\" aria-label=\"description\"></textarea>\n\t\t\t</td>\n\t\t\t<td class=\"col small\">\n\t\t\t\t<input id=\"js-unity-" + id + "\" class=\"js-unity\" type=\"text\" name=\"unity\" aria-label=\"unity\" placeholder=\"0.00\" value=\"\">\n\t\t\t</td>\n\t\t\t<td class=\"col small\">\n\t\t\t\t<input data-id=\"" + id + "\" id=\"js-quantity-" + id + "\" name=\"qty\" class=\"js-quantity\" type=\"text\" placeholder=\"0\" value=\"\" aria-label=\"qty\">\n\t\t\t</td>\n\t\t\t<td class=\"amount-col col small\">\n\t\t\t\t<input id=\"js-amount-" + id + "\" class=\"js-amount\" name=\"montant\" readonly placeholder=\"0.00\" value=\"\" aria-label=\"qty\">\n\t\t\t</td>\n\t\t\t" + (id !== 0 ? "<td class=\"remove-wrapper\"><i id=\"js-delete-" + id + "\" class=\"js-delete icon icon-minus\"></i></td>" : "") + "\n\t\t</tr>";
     };
 
     this.calculateSubtotal = function () {
@@ -588,7 +588,7 @@ var Image_1 = __importDefault(require("./components/Image"));
     dateFormat: "d-m-Y"
   });
 })();
-},{"./styles/main.scss":"src/styles/main.scss","./libs/utils":"src/libs/utils.ts","./components/Selectors":"src/components/Selectors.ts","./components/ProductsTable":"src/components/ProductsTable.ts","./components/ActionBar":"src/components/ActionBar.ts","./components/Image":"src/components/Image.ts"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/main.scss":"src/styles/main.scss","./libs/utils":"src/libs/utils.ts","./components/Selectors":"src/components/Selectors.ts","./components/ProductsTable":"src/components/ProductsTable.ts","./components/ActionBar":"src/components/ActionBar.ts","./components/Image":"src/components/Image.ts"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -616,7 +616,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58444" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52990" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -792,5 +792,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.ts"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.ts"], null)
 //# sourceMappingURL=/src.f10117fe.js.map

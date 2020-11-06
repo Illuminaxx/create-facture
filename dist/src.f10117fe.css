@@ -43,8 +43,8 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: 1em;
+  margin: 0.17em 0;
 }
 
 /* Grouping content
@@ -601,7 +601,7 @@ button:focus {
 .estimate {
   background: #f6f7f7;
   font-family: "Roboto", sans-serif;
-  color: #333;
+  color: #000;
   max-width: 1050px;
   min-width: 940px;
   border: 1px solid #cec6c6;
@@ -748,9 +748,9 @@ button:focus {
   margin-bottom: 20px;
 }
 .estimate__table th {
-  background: #0b97c4;
+  background: #247BA0;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
 }
 .estimate__table th td {
   padding: 10px 0px 10px 10px;
@@ -905,7 +905,7 @@ button:focus {
   background: #eca115;
 }
 .actions__estimate__add {
-  background: #0b97c4;
+  background: #247BA0;
 }
 .actions__estimate__add:hover {
   background: #037297;
@@ -1150,8 +1150,8 @@ button:focus {
   display: block;
 }
 .x-preview h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: 1em;
+  margin: 0.17em 0;
 }
 .x-preview figcaption,
 .x-preview figure,
@@ -1433,7 +1433,7 @@ button:focus {
 .x-preview .estimate {
   background: #fff;
   font-family: "Roboto", sans-serif;
-  color: #333;
+  color: #000;
   max-width: 1000px;
   min-width: 940px;
   border: 0;
@@ -1684,8 +1684,8 @@ section {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
   h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 1em;
+    margin: 0.17em 0;
   }
 
   /* Grouping content
@@ -2168,7 +2168,7 @@ select {
   .estimate {
     background: #fff;
     font-family: "Roboto", sans-serif;
-    color: #333;
+    color: #000;
     max-width: 1000px;
     min-width: 940px;
     border: 0;

@@ -81,7 +81,7 @@ class ProductsTable {
 		return `
 		<tr id="js-row-${id}">
 			<td class="col small">
-				<select class="js-select" id="js-select-${id}">
+				<select class="js-select" name="item" id="js-select-${id}" aria-label="item">
 					<option value="0">Choisissez</option>
 					<option value="1">Services</option>
 					<option value="2">Heures</option>
@@ -90,16 +90,16 @@ class ProductsTable {
 				</select>
 			</td>
 			<td class="col large">
-				<textarea class="js-description" value=""></textarea>
+				<textarea class="js-description" name="description" value="" aria-label="description"></textarea>
 			</td>
 			<td class="col small">
-				<input id="js-unity-${id}" class="js-unity" type="text" placeholder="0.00" value="">
+				<input id="js-unity-${id}" class="js-unity" type="text" name="unity" aria-label="unity" placeholder="0.00" value="">
 			</td>
 			<td class="col small">
-				<input data-id="${id}" id="js-quantity-${id}" class="js-quantity" type="text" placeholder="0" value="">
+				<input data-id="${id}" id="js-quantity-${id}" name="qty" class="js-quantity" type="text" placeholder="0" value="" aria-label="qty">
 			</td>
 			<td class="amount-col col small">
-				<input id="js-amount-${id}" class="js-amount" readonly placeholder="0.00" value="">
+				<input id="js-amount-${id}" class="js-amount" name="montant" readonly placeholder="0.00" value="" aria-label="qty">
 			</td>
 			${
 			id !== 0

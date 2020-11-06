@@ -458,6 +458,7 @@ template {
 
 .icon-printer:before {
   content: "";
+  color: #363636;
 }
 
 .icon-plus:before {
@@ -1399,6 +1400,7 @@ button:focus {
 }
 .x-preview .icon-printer:before {
   content: "";
+  color: #363636;
 }
 .x-preview .icon-plus:before {
   content: "";
@@ -2117,6 +2119,7 @@ menu {
 
   .icon-printer:before {
     content: "";
+    color: #363636;
   }
 
   .icon-plus:before {
